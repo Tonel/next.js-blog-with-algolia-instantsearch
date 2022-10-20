@@ -30,8 +30,7 @@ export default async (req, res) => {
     }
   });
 
-  // initializing the Algolia client with
-  // your keys
+  // initializing the Algolia client with the secret keys
   const algoliaClient = algoliasearch(
       process.env.NEXT_PUBLIC_ALGOLIA_APPLICATION_ID,
       process.env.ALGOLIA_ADMIN_KEY,
