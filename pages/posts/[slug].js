@@ -9,6 +9,7 @@ import PostHeader from "@/components/post-header";
 import SectionSeparator from "@/components/section-separator";
 import { request } from "@/lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "@/lib/fragments";
+import Search from "@/components/search";
 
 export async function getStaticPaths() {
   const data = await request({ query: `{ allPosts { slug } }` });
@@ -126,6 +127,7 @@ export default function Post({ subscription, preview }) {
       <Head>{renderMetaTags(metaTags)}</Head>
       <Container>
         <Header />
+        <Search />
         <article>
           <PostHeader
             title={post.title}
